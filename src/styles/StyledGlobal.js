@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
 body{
     font-size:20px;
     font-family: "AvertaStd-Thin";
-    background:#fff;
+    background:${props => props.theme.bgSidebar};
     margin:0;
     padding:0;
     line-height:1;

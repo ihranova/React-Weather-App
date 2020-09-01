@@ -1,10 +1,10 @@
 import React from 'react'
 
-const LocationBox = () =>(
-    <div class = "location">
-        <div class = "location_inner">
-            <img src = "https://i.redd.it/1vk0sntsvc411.jpg" width = "100%"/>
-            <span>New York, USA</span>
+const LocationBox = ({image, titleLocation}) =>(
+    <div className = "location">
+        <div className = "location_inner">
+            <img src = {image} width = "100%"/>
+            <span>{titleLocation}</span>
         </div>
     </div>
 

@@ -2,23 +2,23 @@ import React from 'react';
 import {StyledHighlights} from './../../styles'; 
 const Highlights = () =>(
     <StyledHighlights>
-        <div class = "highlights_info">
+        <div className = "highlights_info">
             <h1>Today's Highlights</h1>
-            <div class = "highlights_inner">
-                <div class = "box_info">
-                    <span class = "type-info">Wind Status</span>
-                    <div class = "info-text"><span>7.7</span> km/h</div>
-                    <div class = "emoticons">Average 🙁</div>
+            <div className = "highlights_inner">
+                <div className = "box_info">
+                    <span className = "type-info">Wind Status</span>
+                    <div className = "info-text"><span>7.7</span> km/h</div>
+                    <div className = "emoticons">Average 🙁</div>
                 </div>
-                <div class = "box_info">
-                    <span class = "type-info">Wind Status</span>
-                    <div class = "info-text"><span>7.7</span> km/h</div>
-                    <div class = "emoticons">Average 🙁</div>
+                <div className = "box_info">
+                    <span className = "type-info">Wind Status</span>
+                    <div className = "info-text"><span>7.7</span> km/h</div>
+                    <div className = "emoticons">Average 🙁</div>
                 </div>
-                <div class = "box_info">
-                    <span class = "type-info">Wind Status</span>
-                    <div class = "info-text"><span>7.7</span> km/h</div>
-                    <div class = "emoticons">Average 🙁</div>
+                <div className = "box_info">
+                    <span className = "type-info">Wind Status</span>
+                    <div className = "info-text"><span>7.7</span> km/h</div>
+                    <div className = "emoticons">Average 🙁</div>
                 </div>
             </div>
         </div>

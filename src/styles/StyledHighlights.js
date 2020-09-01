@@ -5,14 +5,17 @@ const StyledHighlights = styled.div`
    h1{
        font-size:23px;
        margin-top:30px;
+       color:${props => props.theme.textColor};
+
    }
    .highlights_inner{
+    color:${props => props.theme.textColor};   
     display:flex;
     justify-content: space-between;
     margin-top: 20px;
     text-align: center;
     .box_info{
-        background:#fff;
+        background:${props => props.theme.bgSidebar};
         border-radius:20px;
         padding: 15px;
         max-width: 32%;

@@ -34,6 +34,7 @@ const StyledSidebar = styled.div`
 
         }
         .gray-border{
+            color:${props => props.theme.textColor};
             border-radius:50px;
             height:30px;
             width:30px;
@@ -41,12 +42,17 @@ const StyledSidebar = styled.div`
             background:${props => props.theme.bgContent};
             cursor:pointer;
         }
+        .search-color{
+            color:${props => props.theme.textColor};
+        }
     }
+
     
 .temperature{
     padding-bottom:30px;
     font-size:75px;
     font-weight: 300;
+    color:${props => props.theme.textColor};
     span{
         position: relative;
         top: -17px;

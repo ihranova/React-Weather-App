@@ -13,10 +13,10 @@ export const themeLight = {
 }
 
 export const themeDark = {
-    bgSidebar:'#878682',
+    bgSidebar:'#212121',
     textColor:'#FFFFFF',
     textLightColor:'#BEBEBE',
-    bgContent:'#444444',
+    bgContent:'#292929',
     bgBlue:'#092C6C',
     bgOrange:'#FFC05D',
     bgYellow:'#F5D47C',

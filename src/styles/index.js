@@ -6,6 +6,7 @@ import StyledSidebar  from './StyledSidebar';
 import StyledToday  from './StyledToday';
 import StyledWeek  from './StyledWeek';
 import StyledDashboard from './StyledDashboard';
+import StyledSpinner from './StyledSpinner';
 export {
     StyledGlobal,
     StyledHeader,
@@ -14,5 +15,6 @@ export {
     StyledSidebar,
     StyledWeek,
     StyledToday,
-    StyledDashboard
+    StyledDashboard,
+    StyledSpinner 
 };
