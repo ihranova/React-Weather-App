@@ -19,8 +19,8 @@ const Header = ({nightMode,nightModeCallback}) =>(
           <div className = "toggle-theme">
             <input type="checkbox" className="checkbox" id="chk" checked = {nightMode} onChange={nightModeCallback}/>
                 <label className="label" htmlFor="chk">
-                    <div className = "moon"><RiMoonClearFill size={12}/></div>
                     <div className = "sun"><IoIosSunny size={15}/></div>
+                    <div className = "moon"><RiMoonClearFill size={12}/></div>
                     <div className="ball"></div>
                 </label>
           </div>

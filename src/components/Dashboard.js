@@ -14,13 +14,15 @@ import {themeLight, themeDark} from '../constants';
 import {useImageFetch} from '../hooks/useImageFetch';
 import {useCoordinations} from '../hooks/useCoordinations';
 import {fetchWeatherFetch} from '../helpers';
+import {useNightMode} from '../hooks/useNightMode';
 import {SEARCH_BY_LOCATION,DEFAULT_URL,API_URL_APPID,API_APPID,SEARCH_DEFAULT,SEARCH_BY_WORD} from '../api';
 
 const Dashboard = () =>{
-    const [nightMode, setNightMode] = useState(false);
-    const [weather,setWeather] = useState([]);
+
+    const [nightMode, nightModeChanged] = useNightMode();
     const [image, fetchImage] = useImageFetch();
     const [{lat,long}, findCoordinates] = useCoordinations();
+    const [weather,setWeather] = useState([]);
 
     const fetchCoordinates = () =>{
         findCoordinates();  
@@ -41,11 +43,11 @@ const Dashboard = () =>{
     },[long]);
 
     const nightModeCallback = () =>{
-        setNightMode(!nightMode);
+        nightModeChanged();
     }
-
+    
+ 
     const doSearchLocation = (search) =>{
-        //console.log(search);
         if(search){
             const searchUp = search.charAt(0).toUpperCase() + search.slice(1)
             fetchWeatherFetch(`${API_URL_APPID}/?q=${searchUp}&APPID=${API_APPID}`).then((res)=>{
