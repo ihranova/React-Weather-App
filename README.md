@@ -12,8 +12,8 @@
 👉 Uses React Icons<br/>
 
 # Get API keys
-https://openweathermap.org/
-https://unsplash.com/developers
+https://openweathermap.org/ <br/>
+https://unsplash.com/developers <br/>
 
 You need to create .env and add the follow keys<br/>
 REACT_APP_API_KEY=your-api<br />
