@@ -16,5 +16,5 @@ https://openweathermap.org/
 https://unsplash.com/developers
 
 You need to create .env and add the follow keys<br/>
-REACT_APP_API_KEY=your-api
+REACT_APP_API_KEY=your-api<br />
 REACT_APP_API_KEY=your-api
