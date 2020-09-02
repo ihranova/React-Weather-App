@@ -2,14 +2,14 @@ import React, {useState} from 'react'
 import {MdGpsFixed} from 'react-icons/md';
 import {BiSearch} from 'react-icons/bi';
 
-const SearchBar = ({findCoordinates,searchCallback}) =>{
+const SearchBar = ({findCoordinates,searchCallback,error}) =>{
     const [searchTerm,setSearchTerm] = useState('');
     const doChangeInput = (e) =>{
         const {value} = e.target;
         setSearchTerm(value);
     } 
     const doSearch = () =>{
-        searchCallback(searchTerm)
+        searchCallback(searchTerm);
     }
     return(
         <div className = "search_bar">
@@ -20,11 +20,11 @@ const SearchBar = ({findCoordinates,searchCallback}) =>{
                     placeholder = "Search for places ..." 
                     onChange = {doChangeInput}
                     onKeyPress={e =>  e.key === 'Enter' && doSearch() }
-                    value={searchTerm}/>
+                    value={error ? '' :  searchTerm} />
                 </div>
                 <div className = "gray-border" onClick = {findCoordinates}><MdGpsFixed /></div>
-            
             </div>
+            {error && (<div className = "error">Please type correct!</div>)}  
         </div>);
 
 };

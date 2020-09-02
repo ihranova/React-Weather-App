@@ -68,10 +68,13 @@ const StyledSidebar = styled.div`
         margin-left:-15px;
         font-weight: 900;
     }
-
    
 }    
-  
+.error{
+    font-size:16px;
+    color:red;
+}
+
 .day{
     font-size:18px;
     color:${props => props.theme.textColor};
@@ -95,6 +98,17 @@ hr{
     color:${props => props.theme.textColor};
     line-height:30px;
     font-weight:900;
+    div{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        span{
+            margin-left:10px;
+        }
+        path{
+            stroke:${props => props.theme.textColor};
+        }
+    }
 }
 .location{
     margin:15% 0;

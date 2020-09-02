@@ -7,6 +7,8 @@ import StyledToday  from './StyledToday';
 import StyledWeek  from './StyledWeek';
 import StyledDashboard from './StyledDashboard';
 import StyledSpinner from './StyledSpinner';
+import StyledSpinnerContainer from './StyledSpinnerContainer';
+
 export {
     StyledGlobal,
     StyledHeader,
@@ -16,5 +18,6 @@ export {
     StyledWeek,
     StyledToday,
     StyledDashboard,
-    StyledSpinner 
+    StyledSpinner,
+    StyledSpinnerContainer 
 };
