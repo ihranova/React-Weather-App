@@ -11,7 +11,7 @@
 👉 Styled with Styled Components<br/>
 👉 Uses React Icons<br/>
 
-#Get API keys
+# Get API keys
 https://openweathermap.org/
 https://unsplash.com/developers
 
