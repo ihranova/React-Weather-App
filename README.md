@@ -11,10 +11,15 @@
 👉 Styled with Styled Components<br/>
 👉 Uses React Icons<br/>
 
+# Credits:
+Images for weather: https://www.iconfinder.com/weather-icons?price=free<br/>
+Photos: https://unsplash.com/<br/>
+Design by Anton Mikhaltsov - https://dribbble.com/shots/10460680-Weather-App<br/>
+
 # Get API keys
 https://openweathermap.org/ <br/>
 https://unsplash.com/developers <br/>
 
 You need to create .env and add the follow keys<br/>
-REACT_APP_API_KEY=your-api<br />
-REACT_APP_API_KEY=your-api
+REACT_APP_API_KEY_APPID=your-api<br />
+REACT_APP_API_KEY_UNSPLASH=your-api
