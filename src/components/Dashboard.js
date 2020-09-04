@@ -57,13 +57,13 @@ const Dashboard = () => {
     return (
         <ThemeProvider theme={nightMode ? themeDark : themeLight} >
             <StyledDashboard>
-                <Sidebar
+                {weather && <Sidebar
                     findCoordinates={fetchCoordinates}
                     data={weather}
                     searchCallback={doSearchLocation}
                     error={error}
                     image={image}
-                    titleLocation={weather.city + ", " + countries[weather.country].name} />
+                titleLocation={weather.city + ", " + countries[weather.country].name} /> }
                 <Container>
                     <Header nightModeCallback={nightModeCallback}
                         nightMode={nightMode} showDaysCallback = {showDaysCallback} showActive = {showDays}/>
