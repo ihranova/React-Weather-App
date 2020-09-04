@@ -2,7 +2,7 @@
 const API_APPID = process.env.REACT_APP_API_KEY_APPID;
 const API_UNPSLASH = process.env.REACT_APP_API_KEY_UNSPLASH;
 
-const API_URL_APPID = 'http://api.openweathermap.org/data/2.5/weather';
+const API_URL_APPID = 'https://api.openweathermap.org/data/2.5/weather';
 const DEFAULT_URL = `${API_URL_APPID}/?APPID=${API_APPID}&lat=41.390205&lon=2.154007`;
 const SEARCH_BY_LOCATION = `${API_URL_APPID}?appid=${API_APPID}`; //&lat={lat}&lon={lon}
 
