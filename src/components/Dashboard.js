@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
-import {countries} from 'country-data';
-
 //include layout
 import Header from './layouts/Header';
 import Highlights from './layouts/Highlights';
@@ -57,13 +55,13 @@ const Dashboard = () => {
     return (
         <ThemeProvider theme={nightMode ? themeDark : themeLight} >
             <StyledDashboard>
-                {weather && <Sidebar
+                <Sidebar
                     findCoordinates={fetchCoordinates}
                     data={weather}
                     searchCallback={doSearchLocation}
                     error={error}
                     image={image}
-                titleLocation={weather.city + ", " + countries[weather.country].name} /> }
+                    titleLocation={weather} />
                 <Container>
                     <Header nightModeCallback={nightModeCallback}
                         nightMode={nightMode} showDaysCallback = {showDaysCallback} showActive = {showDays}/>

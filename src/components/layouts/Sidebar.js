@@ -4,6 +4,8 @@ import WeatherIcon from '../elements/WeatherIcon';
 import LocationBox from '../elements/LocationBox';
 import WeatherInfo from '../elements/WeatherInfo';
 import { StyledSidebar } from './../../styles';
+import {countries} from 'country-data';
+
 
 const Sidebar = ({ findCoordinates, searchCallback, image, titleLocation, error, data }) => {
     return (
@@ -11,7 +13,7 @@ const Sidebar = ({ findCoordinates, searchCallback, image, titleLocation, error,
             <SearhBar findCoordinates={findCoordinates} searchCallback={searchCallback} error={error} />
             <WeatherIcon icon={data.weather[0].icon} />
             <WeatherInfo data={data} />
-            <LocationBox image={image} titleLocation={titleLocation} />
+            {titleLocation.country && <LocationBox image={image} titleLocation={titleLocation.city + ", " + countries[titleLocation.country].name} />}
         </StyledSidebar>);
 };
 
