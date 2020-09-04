@@ -80,5 +80,12 @@ const StyledHeader = styled.div`
         color:${props => props.theme.bgTempTextActive};
         
     }
+    .toggle-theme{
+        @media(max-width:768px){
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+    }
 `;
 export default StyledHeader;

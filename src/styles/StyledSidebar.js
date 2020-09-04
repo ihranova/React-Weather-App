@@ -1,20 +1,29 @@
 import styled from 'styled-components';
 
 const StyledSidebar = styled.div`
+@media (min-width: 991px){
     max-width:300px;
     width:100%;
     float:left;
+}
     background:${props => props.theme.bgSidebar};
     padding:30px;
     /*justify-content: center;
     align-items: center;
     display: flex;*/
+
+  
   
     .search_content{
         display:flex;
         display: flex;
         justify-content: center;
         align-items: center;
+        @media(max-width:768px){
+       
+                margin-top:35px;
+            
+        }
 
         input{
             padding-left:10px;
@@ -47,7 +56,9 @@ const StyledSidebar = styled.div`
             color:${props => props.theme.textColor};
         }
     }
-
+.icon_weather{
+    margin:30px 0;
+}
     
 .temperature{
     padding-bottom:30px;

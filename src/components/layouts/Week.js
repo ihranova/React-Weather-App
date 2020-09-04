@@ -40,9 +40,9 @@ const Week = ({ data }) => (
                 <div>{new Date(day.dt * 1000).toLocaleString('en-US', { weekday: 'short' })}</div>
                 <img src={require('../../images/v2/' + day.weather[0].icon + '.png')} />
                 <div className="temp_info">
-                    <span>{convertC(day.temp.max).toFixed(0)}°</span>
-                    <span> </span>
-                    <span className="light-text">{convertC(day.temp.min).toFixed(0)}°</span>
+                    <span>{convertC(day.temp.max).toFixed(0)}° </span>
+                    <span> - </span>
+                    <span className="light-text">{convertC(day.temp.min).toFixed(0)}° C</span>
                 </div>
             </div></SwiperSlide>)}
         </Swiper></StyledWeek>);
