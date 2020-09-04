@@ -6,7 +6,7 @@ export const useImageFetch = () =>{
     const fecthImage = async endpoint =>{
         try{
             const result= await(await fetch(endpoint)).json();
-            setImage(result.results[1].urls.regular);
+            setImage(result.results[Math.floor(Math.random()*10)].urls.regular);
             //console.log(result.results[0].urls.regular);
         }catch(error){
             console.log(error);

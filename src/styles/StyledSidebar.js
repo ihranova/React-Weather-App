@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 const StyledSidebar = styled.div`
-    flex:1;
-    max-width:330px;
+    max-width:300px;
+    width:100%;
+    float:left;
     background:${props => props.theme.bgSidebar};
     padding:30px;
     /*justify-content: center;
@@ -120,7 +121,7 @@ hr{
         width:100%;
         :before{
             content:'';
-            background:rgba(0,0,0,0.2);
+            background: rgba(0,0,0,0.35);
             position:absolute;
             left:0;
             top:0;

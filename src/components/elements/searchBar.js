@@ -10,6 +10,7 @@ const SearchBar = ({findCoordinates,searchCallback,error}) =>{
     } 
     const doSearch = () =>{
         searchCallback(searchTerm);
+        setSearchTerm("");
     }
     return(
         <div className = "search_bar">
@@ -20,7 +21,7 @@ const SearchBar = ({findCoordinates,searchCallback,error}) =>{
                     placeholder = "Search for places ..." 
                     onChange = {doChangeInput}
                     onKeyPress={e =>  e.key === 'Enter' && doSearch() }
-                    value={error ? '' :  searchTerm} />
+                    value={searchTerm} />
                 </div>
                 <div className = "gray-border" onClick = {findCoordinates}><MdGpsFixed /></div>
             </div>

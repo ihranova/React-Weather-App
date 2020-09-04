@@ -3,8 +3,10 @@ import styled from 'styled-components';
 const StyledHighlights = styled.div`
 
    h1{
-       font-size:23px;
+       font-size:21px;
+       font-weight:100;
        margin-top:30px;
+       font-family: "Averta-Regular";
        color:${props => props.theme.textColor};
 
    }

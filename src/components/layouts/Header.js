@@ -2,11 +2,15 @@ import React from 'react';
 import {StyledHeader} from './../../styles';
 import {IoIosSunny} from 'react-icons/io';
 import {RiMoonClearFill} from 'react-icons/ri';
-const Header = ({nightMode,nightModeCallback}) =>(
+const Header = ({nightMode,nightModeCallback, showDaysCallback,showActive}) =>{
+    const enableToday = (enabled) =>{
+        showDaysCallback(enabled);
+    }
+    return (
     <StyledHeader>
           <div className = "today-week">
-              <span className = "today">Today</span>
-              <span className = "week active">Week</span>
+              <span className = {`today ${showActive ? "active" : ""}`} onClick = {() => enableToday(true)}>Today</span>
+              <span className = {`week  ${showActive ? "" : "active"}`} onClick = {() => enableToday(false)}>Week</span>
           </div>
           <div className = "temperature">
               <div className = "celsius active">
@@ -27,5 +31,6 @@ const Header = ({nightMode,nightModeCallback}) =>(
 
     </StyledHeader>
     );
+}
 
 export default Header;
