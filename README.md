@@ -9,7 +9,7 @@
 👉 Uses React, including React Hooks<br/>
 👉 Uses fetch for data fetching, included in a custom React Hook<br/>
 👉 Styled with Styled Components<br/>
-👉 Uses React Icons<br/>
+👉 Uses React Icons, React Swiper, Node Sass<br/>
 
 # Credits:
 Images for weather: https://www.iconfinder.com/weather-icons?price=free<br/>
