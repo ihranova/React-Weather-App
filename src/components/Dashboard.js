@@ -28,6 +28,8 @@ const Dashboard = () => {
     const [showDays, setShowDays] = useState(false);
     const fetchCoordinates = () => {
         findCoordinates();
+        getWeatherLocation(lat,long);
+        fetchImage(`${SEARCH_BY_WORD}${weather.city}`);
     }
     const nightModeCallback = () => {
         nightModeChanged();
@@ -41,10 +43,11 @@ const Dashboard = () => {
         fetchImage(`${SEARCH_BY_WORD}${weather.city}`);
    }
 
-    //console.log("location", lat, long);
+    console.log("location", lat, long);
     console.log('Weather', weather);
     
     useEffect(()=>{
+        //default fetching..
         getWeatherLocation(lat,long);
         fetchImage(`${SEARCH_BY_WORD}${weather.city}`);
     },[lat,long])

@@ -36,7 +36,7 @@ const Week = ({ data }) => (
             //onSlideChange={() => console.log('slide change')}
             //onSwiper={(swiper) => console.log(swiper)}
             >
-            {data && data.map((day, i) => <SwiperSlide><div className="box_info" key={i}>
+            {data && data.map((day, i) => <SwiperSlide key={i.toString()}><div className="box_info">
                 <div>{new Date(day.dt * 1000).toLocaleString('en-US', { weekday: 'short' })}</div>
                 <img src={require('../../images/v2/' + day.weather[0].icon + '.png')} />
                 <div className="temp_info">

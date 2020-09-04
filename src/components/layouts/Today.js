@@ -38,8 +38,8 @@ const Today = ({ data }) => (
         //onSwiper={(swiper) => console.log(swiper)}
         >
             {data && data.map((item, i) => (
-            <SwiperSlide>
-                <div className="box_info" key={i}>
+            <SwiperSlide key={i.toString()}>
+                <div className="box_info" >
                     <div>{(new Date(item.dt * 1000)).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}</div>
                     <img src={require('../../images/v2/' + item.weather[0].icon + '.png')} />
                     <div className="temp_info">
