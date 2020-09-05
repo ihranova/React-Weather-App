@@ -11,7 +11,7 @@
 👉 Styled with Styled Components<br/>
 👉 Uses React Icons, React Swiper, Node Sass<br/>
 
-<h2># Features</h2>
+# Features
 <g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji> Dark and Light Theme <br />
 <g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji> City Finder <br />
 <g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji> Geolocation API <br />
