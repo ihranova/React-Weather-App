@@ -2,9 +2,13 @@ import React from 'react';
 import { StyledHeader } from './../../styles';
 import { IoIosSunny } from 'react-icons/io';
 import { RiMoonClearFill } from 'react-icons/ri';
-const Header = ({ nightMode, nightModeCallback, showDaysCallback, showActive }) => {
+
+const Header = ({ nightMode, nightModeCallback, showDaysCallback, showActive, unitTempCallback,unitMode }) => {
     const enableToday = (enabled) => {
         showDaysCallback(enabled);
+    }
+    const changedTemp = (enabled) =>{
+        unitTempCallback(enabled);
     }
     return (
         <StyledHeader>
@@ -13,10 +17,10 @@ const Header = ({ nightMode, nightModeCallback, showDaysCallback, showActive }) 
                 <span className={`week  ${showActive ? "" : "active"}`} onClick={() => enableToday(false)}>Week</span>
             </div>
             <div className="temperature">
-                <div className="celsius active">
+                <div className={`celsius ${unitMode ? "" : "active"}`} onClick={() => changedTemp(false)}>
                     <span className="degree">°</span> C
               </div>
-                <div className="fahrenheit">
+                <div className={`fahrenheit ${unitMode ? "active" : ""}`} onClick={() => changedTemp(true)}>
                     <span className="degree">°</span> F
               </div>
             </div>

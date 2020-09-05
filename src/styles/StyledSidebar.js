@@ -12,23 +12,22 @@ const StyledSidebar = styled.div`
     align-items: center;
     display: flex;*/
 
-  
-  
     .search_content{
         display:flex;
         display: flex;
         justify-content: center;
         align-items: center;
         @media(max-width:768px){
-       
-                margin-top:35px;
-            
+            margin-top:65px;
         }
 
         input{
             padding-left:10px;
             border:0;
-            font-size:16px;
+            font-size:18px;
+            @media(max-width:768px){
+            font-size: 22px;
+            }
             background:transparent;
             color:${props => props.theme.textColor};
             font-family: "AvertaStd-Thin";
@@ -39,7 +38,10 @@ const StyledSidebar = styled.div`
             ::placeholder{
                 color:${props => props.theme.textColor};
                 opacity:1;
-                font-size:16px;
+                font-size: 18px;
+                @media(max-width:768px){
+                    font-size: 22px;
+                }
             }
 
         }
@@ -51,13 +53,32 @@ const StyledSidebar = styled.div`
             padding:5px;
             background:${props => props.theme.bgContent};
             cursor:pointer;
+            @media(max-width:480px){
+                height: 45px;
+                width: 45px;
+                padding: 9px;
+                font-size: 25px;
+                flex:1;
+            }
         }
         .search-color{
             color:${props => props.theme.textColor};
+            @media(max-width:480px){
+                font-size:28px;
+                flex:1;
+            }
         }
     }
+ .search__box{
+    @media(max-width:480px){
+        flex:14;
+    }
+ }   
 .icon_weather{
     margin:30px 0;
+    @media(max-width:480px){
+        margin:10px 0; 
+    }
 }
     
 .temperature{
@@ -107,6 +128,9 @@ hr{
 }
 .info-weather{
     font-size:14px;
+    @media(max-width:480px){
+        font-size:20px;
+    }
     color:${props => props.theme.textColor};
     line-height:30px;
     font-weight:900;
@@ -124,6 +148,9 @@ hr{
 }
 .location{
     margin:15% 0;
+    @media(max-width:480px){
+        margin:9% 0;
+    }
     .location_inner{
         position:relative;
         border-radius:20px;
@@ -154,6 +181,9 @@ hr{
            -moz-transform: translate(-50%,-50%);
            color:#fff;
            font-size:17px;
+           @media(max-width:480px){
+               font-size:20px;
+           }
            font-family:"Averta-Regular";
            width:100%;
            text-align:center;

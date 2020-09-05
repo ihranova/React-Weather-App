@@ -1,10 +1,10 @@
 import React from 'react';
 import { convertC, convertF } from '../../helpers';
 
-const WeatherInfo = ({ data }) => (
+const WeatherInfo = ({ data,unit }) => (
     <>
         <div className="temperature">
-            {convertC(data.main.temp).toFixed(0)}<span className="degree">°</span> <span className="unit">C</span>
+            {unit ? convertF(data.main.temp).toFixed(0) : convertC(data.main.temp).toFixed(0)}<span className="degree">°</span> <span className="unit">{unit ? "F": "C"}</span>
         </div>
         <div className="date">
             <span className="day">{new Date().toLocaleString('en-US', { weekday: 'long' })}</span>,
@@ -23,7 +23,8 @@ const WeatherInfo = ({ data }) => (
                     <path strokeLinejoin="round" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="1" stroke="#293449" d="M17.6 5.39999L18.7 4.29999"></path>
                     <path strokeLinejoin="round" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="1" stroke="#293449" d="M19.4 9.99707H21"></path>
                 </svg>
-                <span>Feels like {convertC(data.main.feels_like).toFixed(0)} ºC</span>
+                <span>Feels like {unit ? convertF(data.main.feels_like).toFixed(0) : convertC(data.main.feels_like).toFixed(0)} ° {unit ? "F": "C"}</span>
+
             </div>
             {data.clouds && (<div>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-reactroot="">

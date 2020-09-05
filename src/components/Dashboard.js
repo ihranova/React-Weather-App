@@ -14,20 +14,20 @@ import { themeLight, themeDark } from '../constants';
 import { useImageFetch } from '../hooks/useImageFetch';
 import { useCoordinations } from '../hooks/useCoordinations';
 import {useWeatherFetch} from '../hooks/useWeatherFetch';
-import { fetchWeatherFetch } from '../helpers';
 import { useNightMode } from '../hooks/useNightMode';
-import { SEARCH_BY_LOCATION, DEFAULT_URL, API_URL_APPID, API_APPID, SEARCH_BY_WORD, GET_NEXT_DAYS_HOURS,DEF_N_D_H  } from '../api';
+import { SEARCH_BY_WORD } from '../api';
+import { useTempUnit } from '../hooks/UseTempUnit';
 
 const Dashboard = () => {
     const [nightMode, nightModeChanged] = useNightMode();
+    const [unitMode, unitModeChanged] = useTempUnit();
     const [image, fetchImage] = useImageFetch();
-    const [{ lat, long }, loadingLocation, findCoordinates,updateLocation] = useCoordinations();
+    const [{ lat, long }, loadingLocation, findCoordinates] = useCoordinations();
     const [weather, loading, error, fetchWeather, searchByLocation,getWeatherLocation] = useWeatherFetch();
     const [showDays, setShowDays] = useState(false);
     const fetchCoordinates = () => {
         findCoordinates();
         getWeatherLocation(lat,long);
-        fetchImage(`${SEARCH_BY_WORD}${weather.city}`);
     }
     const nightModeCallback = () => {
         nightModeChanged();
@@ -40,8 +40,11 @@ const Dashboard = () => {
         searchByLocation(searchTerm);
         fetchImage(`${SEARCH_BY_WORD}${weather.city}`);
    }
+   const unitTempCallback = (enabled) =>{
+    unitModeChanged(enabled);
+   }
 
-    console.log("location", lat, long);
+    //console.log("location", lat, long);
     console.log('Weather', weather);
     
     useEffect(()=>{
@@ -61,14 +64,19 @@ const Dashboard = () => {
                     searchCallback={doSearchLocation}
                     error={error}
                     image={image}
-                    titleLocation={weather} />
+                    titleLocation={weather} 
+                    unitTemp = {unitMode}
+                    />
                 <Container>
-                    <Header nightModeCallback={nightModeCallback}
+                    <Header 
+                        unitMode = {unitMode}
+                        unitTempCallback={unitTempCallback}
+                        nightModeCallback={nightModeCallback}
                         nightMode={nightMode} showDaysCallback = {showDaysCallback} showActive = {showDays}/>
                     {loading || loadingLocation ? <SpinnerContainer />
                         : <>
-                            {!showDays ? (<Week data={weather.daily} />) 
-                            : (<Today data = {weather.hourly} />) }
+                            {!showDays ? (<Week data={weather.daily} tempUnit = {unitMode}/>) 
+                            : (<Today tempUnit = {unitMode} data = {weather.hourly} />) }
                             <Highlights data={weather.current} />
                         </>}
                 </Container>

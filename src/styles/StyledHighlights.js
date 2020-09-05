@@ -18,10 +18,6 @@ const StyledHighlights = styled.div`
     text-align: center;
     flex-wrap: wrap;
     flex-direction:row;
-    @media (max-width: 768px) {
-        flex-direction: column;
-      }
-    
     .box_info{
         position:relative;
         background:${props => props.theme.bgSidebar};
@@ -43,9 +39,6 @@ const StyledHighlights = styled.div`
         box-shadow: -5px 9px 10px -7px rgba(0,0,0,0.10);
         @media (max-width: 991px){
             flex-basis: 48%;
-        }
-        @media (max-width: 768px){
-            flex-basis: 100%;
         }
         .type-info{
             color:${props => props.theme.textLightColor};
@@ -118,6 +111,11 @@ const StyledHighlights = styled.div`
             color: #fff;
             border-radius: 50px;
             font-size: 18px;
+            @media(max-width:480px){
+                position: absolute;
+                top: 15px;
+                right: 8px;
+            }
         }
         .result-uv{
             display: inline-block;
@@ -144,6 +142,11 @@ const StyledHighlights = styled.div`
             color: #fff;
             border-radius: 50px;
             font-size: 21px;
+            @media(max-width:480px){
+                position: absolute;
+                top: 15px;
+                right: 8px;
+            }
         }
         
     }

@@ -7,11 +7,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/swiper.scss';
 
-const Today = ({ data }) => (
-    <StyledToday>
+const Today = ({ data,tempUnit }) => (
+<StyledToday>
         <Swiper
             spaceBetween={20}
-            slidesPerView={1}
+            slidesPerView={2}
             breakpoints={{
                 // when window width is >= 640px
                 640: {
@@ -41,9 +41,9 @@ const Today = ({ data }) => (
                 <SwiperSlide key={i.toString()}>
                     <div className="box_info" >
                         <div>{(new Date(item.dt * 1000)).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}</div>
-                        <img src={require('../../images/v2/' + item.weather[0].icon + '.png')} />
+                        <img src={require('../../images/v2/' + item.weather[0].icon + '.png')} alt = {item.weather[0].description}/>
                         <div className="temp_info">
-                            <span>{convertC(item.temp).toFixed(0)}° C</span>
+                            <span>{tempUnit ? convertF(item.temp).toFixed(0) : convertC(item.temp).toFixed(0)}° {tempUnit ? "F": "C"}</span>
                         </div>
                     </div>
                 </SwiperSlide>))}

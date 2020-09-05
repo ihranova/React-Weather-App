@@ -10,6 +10,7 @@ export const themeLight = {
    bgTempActive:"#000",
    bgTempText: "#000",
    bgTempTextActive:"#fff",
+   bgIcon: "#fff"
 }
 
 export const themeDark = {
@@ -20,8 +21,9 @@ export const themeDark = {
     bgBlue:'#092C6C',
     bgOrange:'#FFC05D',
     bgYellow:'#F5D47C',
-    bgTemp: '#fff',
-    bgTempActive:"#000",
-    bgTempText: "#000",
-    bgTempTextActive:"#fff",
+    bgTemp: '#000',
+    bgTempActive:"#fff",
+    bgTempText: "#fff",
+    bgTempTextActive:"#000",
+    bgIcon: "#fff"
 }

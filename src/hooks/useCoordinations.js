@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export const useCoordinations = () => {
     const [lat, setLat] = useState('');
@@ -21,12 +21,8 @@ export const useCoordinations = () => {
     const updateLocation = (lat, long) => {
         setLat(lat);
         setLong(long);
-        console.log('Updated Location')
+        //console.log('Updated Location')
     }
-
-    /*useEffect(() =>{
-        findCoordinates();
-    },[lat,long]);*/
 
     return [{ lat, long }, loadingLocation, findCoordinates, updateLocation];
 }

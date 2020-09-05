@@ -24,7 +24,11 @@ const StyledToday = styled.div`
             font-weight:bold;
         }
         img{
-            width: 72%;
+            max-width: 80px;
+            @media(max-width:480px){
+                max-width:120px;
+            }
+            width:100%;
             margin: 10px auto;
         }
         .light-text{

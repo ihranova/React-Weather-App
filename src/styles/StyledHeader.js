@@ -77,8 +77,7 @@ const StyledHeader = styled.div`
         padding-top:2px;
     }
     .moon,.sun{
-        color:${props => props.theme.bgTempTextActive};
-        
+        color:${props => props.theme.bgIcon};
     }
     .toggle-theme{
         @media(max-width:768px){
