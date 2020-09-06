@@ -45,7 +45,7 @@ const Dashboard = () => {
    }
 
     //console.log("location", lat, long);
-    console.log('Weather', weather);
+    //console.log('Weather', weather);
     
     useEffect(()=>{
         //default fetching..

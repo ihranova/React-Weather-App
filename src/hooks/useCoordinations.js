@@ -7,8 +7,8 @@ export const useCoordinations = () => {
 
     const findCoordinates = () => {
         if (navigator.geolocation) {
-            setLoadingLocation(true);
             navigator.geolocation.getCurrentPosition((pos) => {
+                setLoadingLocation(true);
                 setLat(pos.coords.latitude);
                 setLong(pos.coords.longitude);
                 setLoadingLocation(false);

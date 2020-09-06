@@ -82,7 +82,7 @@ const StyledHeader = styled.div`
     .toggle-theme{
         @media(max-width:768px){
             position: absolute;
-            top: 10px;
+            top: 30px;
             right: 20px;
         }
     }
