@@ -7,7 +7,8 @@
 # <h2><g-emoji class="g-emoji" alias="fire" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f525.png"><img class="emoji" alt="fire" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/1f525.png"></g-emoji> Libraries and Technologies</h2>
 👉 Accesses Open Weather API for weather data<br/>
 👉 Uses React, including React Hooks<br/>
-👉 Uses fetch for data fetching, included in a custom React Hook<br/>
+👉 Uses fetch for data fetching, included in a custom React Hook <br />
+👉 Uses Local Storage to save dark theme & current temperature Conversion/celsius or fahrenheit/.<br />
 👉 Styled with Styled Components<br/>
 👉 Uses React Icons, React Swiper, Node Sass<br/>
 
