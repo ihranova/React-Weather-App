@@ -7,15 +7,23 @@ export const useCoordinations = () => {
 
     const findCoordinates = () => {
         if (navigator.geolocation) {
+            setLoadingLocation(true);
             navigator.geolocation.getCurrentPosition((pos) => {
-                setLoadingLocation(true);
+                console.log(pos);
                 setLat(pos.coords.latitude);
                 setLong(pos.coords.longitude);
-                setLoadingLocation(false);
-            })
+                
+                
+            }, (positionError) => {
+                setLat('41.390205');
+                setLong('2.154007');
+                console.log(positionError);
+            });
+            setLoadingLocation(false);
         } else {
             console.log("It's not supported by this browser.")
         }
+        
     }
 
     const updateLocation = (lat, long) => {

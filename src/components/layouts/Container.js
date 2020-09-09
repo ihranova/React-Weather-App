@@ -1,10 +1,10 @@
 import React from 'react';
-import {StyledContainer} from './../../styles';
+import { StyledContainer } from './../../styles';
 
-const Container = ({children}) =>(
-        <StyledContainer>
-            {children}
-        </StyledContainer>
-    );
+const Container = ({ children }) => (
+    <StyledContainer>
+        {children}
+    </StyledContainer>
+);
 
 export default Container;
