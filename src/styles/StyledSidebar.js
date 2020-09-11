@@ -5,6 +5,13 @@ const StyledSidebar = styled.div`
     max-width:300px;
     width:100%;
     float:left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+@media (min-width: 1700px){
+    max-width:400px;
 }
     background:${props => props.theme.bgSidebar};
     padding:30px;
@@ -114,9 +121,10 @@ const StyledSidebar = styled.div`
     font-weight:900;
 }
 .hours{
-    font-size:18px;
+    font-size:20px;
     color:${props => props.theme.textLightColor};
     padding-left:5px;
+    font-weight:bold;
 }
 hr{
     border-width: 0px;

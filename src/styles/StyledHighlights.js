@@ -18,6 +18,10 @@ const StyledHighlights = styled.div`
     text-align: center;
     flex-wrap: wrap;
     flex-direction:row;
+    @media(min-width:1700px){
+        height: calc(100vh - (400px));
+        margin-top:60px;
+    }
     .box_info{
         position:relative;
         background:${props => props.theme.bgSidebar};
@@ -26,6 +30,7 @@ const StyledHighlights = styled.div`
         @media (min-width: 768px){
         margin-left:1%;
         }
+
         text-align:left;
         font-size:17px;
         display: flex;
@@ -40,12 +45,16 @@ const StyledHighlights = styled.div`
         @media (max-width: 991px){
             flex-basis: 48%;
         }
+        @media(min-width:1700px){
+            max-height: 274px;
+        }
         .type-info{
             color:${props => props.theme.textLightColor};
-            font-size:16px;
+            font-size:20px;
             position: absolute;
             top: 20px;
             left: 20px;
+            font-weight:bold;
         }
         .info-text{
             line-height:50px;

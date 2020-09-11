@@ -5,6 +5,9 @@ const StyledContainer = styled.div`
         float:left;
         width:calc(100% - 300px);
     }
+    @media (min-width: 1700px){
+        width:calc(100% - 400px);
+    }
     background:${props => props.theme.bgContent};
     padding: 30px;
 `;

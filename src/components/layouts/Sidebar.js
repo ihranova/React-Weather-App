@@ -1,5 +1,5 @@
 import React from 'react';
-import SearhBar from '../elements/SearchBar';
+import SearhBar from '../elements/searchBar';
 import WeatherIcon from '../elements/WeatherIcon';
 import LocationBox from '../elements/LocationBox';
 import WeatherInfo from '../elements/WeatherInfo';
