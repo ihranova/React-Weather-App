@@ -50,11 +50,14 @@ const StyledHighlights = styled.div`
         }
         .type-info{
             color:${props => props.theme.textLightColor};
-            font-size:20px;
+            font-size:17px;
             position: absolute;
             top: 20px;
             left: 20px;
             font-weight:bold;
+            @media(min-width:1700px){
+                font-size:20px;
+            }
         }
         .info-text{
             line-height:50px;
