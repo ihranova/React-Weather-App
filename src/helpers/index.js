@@ -1,5 +1,5 @@
 export const convertF = (x) => {
-    return (x - 237.15) *  9 / 5 + 32;
+    return convertC(x)*1.8 + 32;
 }
 
 export const convertC = (x) =>{
