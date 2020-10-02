@@ -50,7 +50,7 @@ const StyledHighlights = styled.div`
         }
         .type-info{
             color:${props => props.theme.textLightColor};
-            font-size:17px;
+            font-size:15px;
             position: absolute;
             top: 20px;
             left: 20px;
@@ -60,11 +60,14 @@ const StyledHighlights = styled.div`
             }
         }
         .info-text{
-            line-height:50px;
+            line-height:57px;
         }
         .info-text span{
             font-size:40px;
             font-weight:bold;
+            @media(max-width:620px){
+               font-size:30px;
+            }
             
         }
         .emoticons{
