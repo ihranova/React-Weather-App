@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
 
 export const useNightMode = () => {
-    const [nightMode, setNightMode] = useState(false);
+    //detect browser is using the dark mode
+    let checkTheme =  window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    const [nightMode, setNightMode] = useState(checkTheme);
 
     const nightModeChanged = () => {
         setNightMode(!nightMode);
@@ -9,16 +12,11 @@ export const useNightMode = () => {
     }
 
     useEffect(() => {
-        if (JSON.parse(localStorage.getItem('theme'))) {
-            setNightMode(!nightMode);
-        } else {
-            localStorage.setItem('theme', nightMode)
+       
+        if(localStorage.getItem('theme') === 'false'){
+            setNightMode(false);
         }
-        //detect browser is using the dark mode
-        let darkTheme =  window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if(darkTheme){
-            nightModeChanged();
-        }
+  
 
     }, []);
     return [nightMode, nightModeChanged];
