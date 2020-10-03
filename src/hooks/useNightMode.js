@@ -14,6 +14,12 @@ export const useNightMode = () => {
         } else {
             localStorage.setItem('theme', nightMode)
         }
+        //detect browser is using the dark mode
+        let darkTheme =  window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if(darkTheme){
+            nightModeChanged();
+        }
+
     }, []);
     return [nightMode, nightModeChanged];
 
