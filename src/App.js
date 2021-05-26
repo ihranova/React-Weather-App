@@ -9,7 +9,7 @@ function App() {
     return (
       <h4>
         Please add .env and add follow REACT_APP_API_KEY_APPID &
-        REACT_APP_API_KEY_UNSPLASH.Read more README.md
+        REACT_APP_API_KEY_UNSPLASH. Please read more README.md
       </h4>
     );
   }
